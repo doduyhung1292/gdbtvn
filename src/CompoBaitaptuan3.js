@@ -24,8 +24,7 @@ function CompoBaitaptuan3() {
         <Col></Col>
         <Col xs={10}></Col>
     
-       <Accordion>
-          <h3>A/ Các bài tập java cơ bản</h3>      
+       <Accordion>    
           <Accordion.Item eventKey="0">
             <Accordion.Header>
               Bài 01: Cho trước 1 xâu ký tự là họ tên người đầy đủ nhưng khi nhập có thể thừa một số dấu cách. Hãy xóa đi các dấu cách thừa và in ra họ tên chính xác.

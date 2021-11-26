@@ -21,8 +21,7 @@ function CompoBaitaptuan2() {
         <Row>
         <Col></Col>
         <Col xs={10}></Col>
-        <Accordion>
-          <h3>A/ Các bài tập java cơ bản</h3>      
+        <Accordion>    
           <Accordion.Item eventKey="0">
             <Accordion.Header>
               Bài  01: Cho một dãy số tự nhiên, viết chương trình sắp xếp dãy này theo thứ tự giảm dần.
