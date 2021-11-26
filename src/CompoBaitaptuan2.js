@@ -24,7 +24,7 @@ function CompoBaitaptuan2() {
         <Accordion>    
           <Accordion.Item eventKey="0">
             <Accordion.Header>
-              Bài  01: Cho một dãy số tự nhiên, viết chương trình sắp xếp dãy này theo thứ tự giảm dần.
+              Bài  01: Cho một dãy số tự nhiên, viết chương trình sắp xếp dãy này theo thứ tự tăng dần.
             </Accordion.Header>
             <Accordion.Body>
               <Image src={bai1} />
