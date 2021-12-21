@@ -1,23 +1,253 @@
 import * as React from 'react';
 import { Accordion, Col, Container, Row, Image } from 'react-bootstrap';
-import bai1 from './bai1.1.PNG'
-import bai2 from './bai1.2.PNG'
-import bai3 from './bai1.3.PNG'
-import bai4 from './bai1.4.PNG'
-import bai5 from './bai1.5.PNG'
-import bai6 from './bai1.6.PNG'
-import bai7 from './bai1.7.PNG'
-import bai8 from './bai1.8.PNG'
-import bai9 from './bai1.9.PNG'
-import bai10 from './bai1.10.PNG'
-import bai11 from './bai1.11.PNG'
-import bai12 from './bai1.12.PNG'
-import bai13 from './bai1.13.PNG'
-import bai14 from './bai1.14.PNG'
-import bai15 from './bai1.15.PNG'
-import bai16 from './bai1.16.PNG'
+import Gist from "react-gist";
+import ReactEmbedGist from 'react-embed-gist';
+
 
 function CompoBaitaptuan1() {
+  const bai1 = () => {
+    let result = ["Đỗ Duy Hưng 20183754 .....    "];
+  for ( var i = 2; i < 100 ; i++) {
+    var j = 2;
+    while (j<i-1) {
+      if (i % j == 0) {result.push(i + ' '); break;}
+      else {j++;}
+    }
+  }
+  return  result; }
+
+const bai2 = () => {
+    let result = ["Đỗ Duy Hưng 20183754 ......    "];
+    function isPrime(n) {
+    if (n<2) return false;
+    for ( var i= 2; i<n-1; i++) {
+      if (n%i == 0) {return false;};
+    }
+
+    return true;
+  }
+  var k = 2, dem=0;
+  while (k<100) {
+    if (isPrime(k)) {result.push(k + " "); dem +=1;}
+    if(dem == 20) break;
+    k++;
+  }
+  
+  return  result; }
+
+  const bai3 = () => {
+    let result = ["Đỗ Duy Hưng 20183754 ......    "];
+    console.log("Đỗ Duy Hưng 20183754 ");
+    function isPrime(n) {
+      if (n<2) return false;
+      for (var i= 2; i<n-1; i++) {
+        if (n%i == 0) {return false;};
+      }
+
+      return true;
+    }
+    var j = 1000;
+    while (j<2000) {
+      if (isPrime(j) == true) result.push(j + " ");
+      j++;
+    }
+  
+  return  result; }
+
+  const bai4 = () => {
+    let result = ["Đỗ Duy Hưng 20183754 ......    "];
+    console.log("Đỗ Duy Hưng 20183754 ");
+    for (var i = 1000; i<=2000; i++) {
+      if (i%3==0 && i%7==0 & i%5==0) result.push(i + " ");
+    }
+  
+  return  result; }
+
+  const bai6 = () => {
+    let result = ["Đỗ Duy Hưng 20183754 ......    "];
+    function isPerfect(n) {
+      var tem = 0;
+      for ( var i=0; i<n; i++) {
+        if (n%i == 0 ) tem += i;
+      }
+      if (tem !== 0 && tem == n) return true;
+      else return false;
+    }
+    var dem = 0;
+    var n = 1;
+    while (n< 10000) {
+      if(isPerfect(n) == true) {result.push(n + " "); dem++;}
+      if (dem == 5) break;
+      n++;
+}
+  
+  return  result; }
+
+  const bai7 = () => {
+    let result = ["Đỗ Duy Hưng 20183754 ......    "];
+    console.log("Đỗ Duy Hưng 20183754 ");
+  var a=0, b=0, c=0, d=0;
+  for (var i=0; i<=100; i++) { 
+    if (i%5 == 0) a +=1;
+    if (i%5 == 1) b +=1;
+    if (i%5 == 2) c +=1;
+    if (i%5 == 3) d +=1;
+  }
+  result.push("Số số chia 5 dư 0: " + a + " ");
+  result.push("Số số chia 5 dư 1: " + b + " ");
+  result.push("Số số chia 5 dư 2: " + c + " ");
+  result.push("Số số chia 5 dư 3: " + d + " ");
+  
+  return  result; }
+
+const bai8 = () => {
+    let result = ["Đỗ Duy Hưng 20183754 ......    "];
+    var n = 145;
+    for (var i = 2; i< n-1; i++) {
+      if (n%i == 0 ) {result.push(i + " "); break;}
+    }
+  
+  return  result; }
+
+  const bai9 = () => {
+    let result = ["Đỗ Duy Hưng 20183754 ......    "];
+    let arr = [];
+    var k = 1;
+    var tem;
+    function TRY(n) {
+      for (var i = 2; i < n-1; i++) {
+        if (n%i == 0 ) {
+          arr.push(i);
+          TRY(n/i);
+          break;
+        }
+      }
+      tem = n;
+    }
+    TRY(100);
+    for (var i = 0; i< arr.length; i++) {
+        k *=arr[i];
+      }
+    arr.push(tem/k);
+    result.push(arr);
+  
+  return  result + arr; }
+
+  const bai10 = () => {
+    let result = ["Đỗ Duy Hưng 20183754 ......    "];
+    let arr = [];
+    var k = 1;
+    var tem;
+    function TRY(n) {
+      for (var i = 2; i < n-1; i++) {
+        if (n%i == 0 ) {
+          arr.push(i);
+          TRY(n/i);
+          break;
+        }
+      }
+      tem = n;
+    }
+    TRY(144);
+    for (var i = 0; i< arr.length; i++) {
+        k *=arr[i];
+      }
+    arr.push(tem/k);
+
+    if (arr.length == 0) {result.push("..." + " ");}
+   result.push(arr[0] + " ");
+    var temp = arr[0];
+    for(i=0; i<arr.length; i++) {
+      
+      // console.log(temp);
+      if (arr[i] !== temp) { 
+        temp = arr[i];
+        result.push(temp + " ");
+      }
+    }
+  
+  return  result; }
+
+  const bai11 = () => {
+    let result = ["Đỗ Duy Hưng 20183754 ......    "];
+    var arr = [1, 4, 5, 6, 7, 6, 8, 4];
+    function swap(arra) {
+      var random1 = Math.floor(Math.random()*arr.length);
+      var random2 = Math.floor(Math.random()*arr.length);
+      var temp = arr[random1];
+      arr[random1] = arr[random2];
+      arr[random2] = temp;
+      result.push(arra + " ");
+    } 
+    swap(arr);
+  
+  return  result; }
+
+  const bai12 = () => {
+    let result = ["Đỗ Duy Hưng 20183754 ......    "];
+    var arr = [];
+    var n = 5;
+    for (var i = 0; i<n; i++) {
+      arr.push("*");
+    }
+    var arra;
+    for (var i = 0; i<arr.length; i++) {
+      arra += arr[i];
+      result.push(arra);
+    }
+  
+  return  result; }
+
+  const bai1b = () => {
+    let result = ["Đỗ Duy Hưng 20183754 ......    "];
+    var sum = 0;
+    var finalSum = 0;
+    for (var i = 1; i<=10; i++) {
+      sum +=i;
+      finalSum += 1/sum;
+    }
+  
+  return  finalSum; }
+
+  const bai2b = () => {
+    let result = ["Đỗ Duy Hưng 20183754 ......    "];
+    var mul = 1;
+    var finalSum = 0;
+    for (var i = 1; i<=10; i++) {
+      mul *=i;
+     finalSum += 1/mul;
+    }
+  
+  return  finalSum; }
+
+  const bai3b = () => {
+    let result = ["Đỗ Duy Hưng 20183754 ......    "];
+    var mul = 1, sum = 0;
+    var finalSum = 0;
+    var arr = [];
+    for (var i = 1; i<=10; i++) {
+      mul *=i;
+      arr.push(mul);
+    }
+    for (var i = 0; i< arr.length; i++) {
+      sum += arr[i];
+      finalSum += 1/sum
+    }
+  
+  return  finalSum; }
+
+  const bai4b = () => {
+    let result = ["Đỗ Duy Hưng 20183754 ......    "];
+    var k;
+    function F(k) {
+      if (k == 1) return 1;
+      if (k == 2) return 2;
+      return F(k-1) + F(k-2);
+    }
+    F(5);
+  
+  return  F(5); }
+
 
   return (
       <Container>
@@ -32,82 +262,9 @@ function CompoBaitaptuan1() {
               Bài 01: In ra màn hình tất cả các hợp số nhỏ hơn 100
             </Accordion.Header>
             <Accordion.Body>
-              <Image src={bai1} />
+             <ReactEmbedGist gist="doduyhung1292/ce18a14bd2753c5ab2d1c3d5a736c925" />
               <h3>Kết quả:</h3>
-              <h5> Đỗ Duy Hưng 20183754</h5><h5>   4
-6
-8
-9
-10
-12
-14
-15
-16
-18
-20
-21
-22
-24
-25
-26
-27
-28
-30
-32
-33
-34
-35
-36
-38
-39
-40
-42
-44
-45
-46
-48
-49
-50
-51
-52
-54
-55
-56
-57
-58
-60
-62
-63
-64
-65
-66
-68
-69
-70
-72
-74
-75
-76
-77
-78
-80
-81
-82
-84
-85
-86
-87
-88
-90
-91
-92
-93
-94
-95
-96
-98
-99
-</h5>
+              <div> {bai1()}</div>
             </Accordion.Body>
           </Accordion.Item>
 
@@ -116,10 +273,9 @@ function CompoBaitaptuan1() {
               Bài 02: In ra màn hình 20 số nguyên tố đầu tiên
             </Accordion.Header>
             <Accordion.Body>
-              <Image src={bai2} />
+             <ReactEmbedGist gist="doduyhung1292/4cfe71aaef93802607e7f25c9c23df94" />
               <h3>Kết quả:</h3>
-              <h5>Đỗ Duy Hưng 20183754</h5>
-              <h5>2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 67 71</h5>
+              <p> {bai2()}</p>
             </Accordion.Body>
           </Accordion.Item>
 
@@ -128,160 +284,9 @@ function CompoBaitaptuan1() {
               Bài 03: In ra màn hình tất cả các số nguyên tố từ 1000 đến 2000
             </Accordion.Header>
             <Accordion.Body>
-              <Image src={bai3} />
-              <h3>Kết quả: </h3>
-              <h5>Đỗ Duy Hưng 20183754</h5><h5>   1009
-1013
-1019
-1021
-1031
-1033
-1039
-1049
-1051
-1061
-1063
-1069
-1087
-1091
-1093
-1097
-1103
-1109
-1117
-1123
-1129
-1151
-1153
-1163
-1171
-1181
-1187
-1193
-1201
-1213
-1217
-1223
-1229
-1231
-1237
-1249
-1259
-1277
-1279
-1283
-1289
-1291
-1297
-1301
-1303
-1307
-1319
-1321
-1327
-1361
-1367
-1373
-1381
-1399
-1409
-1423
-1427
-1429
-1433
-1439
-1447
-1451
-1453
-1459
-1471
-1481
-1483
-1487
-1489
-1493
-1499
-1511
-1523
-1531
-1543
-1549
-1553
-1559
-1567
-1571
-1579
-1583
-1597
-1601
-1607
-1609
-1613
-1619
-1621
-1627
-1637
-1657
-1663
-1667
-1669
-1693
-1697
-1699
-1709
-1721
-1723
-1733
-1741
-1747
-1753
-1759
-1777
-1783
-1787
-1789
-1801
-1811
-1823
-1831
-1847
-1861
-1867
-1871
-1873
-1877
-1879
-1889
-1901
-1907
-1913
-1931
-1933
-1949
-1951
-1973
-1979
-1987
-1993
-1997
-1999
-1999</h5>
-            </Accordion.Body>
-          </Accordion.Item>
-
-          <Accordion.Item eventKey="4">
-            <Accordion.Header>
-              Bài 04: In ra màn hình các số nhỏ hơn 100 và chia hết cho 3,7
-            </Accordion.Header>
-            <Accordion.Body>
-              <Image src={bai4} />
+              <ReactEmbedGist gist="doduyhung1292/30392eacbeeda7a1815c68471c260f79" />
               <h3>Kết quả:</h3>
-              <h5> Đỗ Duy Hưng 20183754</h5><h5>  
-0
-21
-42
-63
-84</h5>
+              <p> {bai3()}</p>
             </Accordion.Body>
           </Accordion.Item>
 
@@ -290,20 +295,9 @@ function CompoBaitaptuan1() {
               Bài 05: In ra màn hình các số nằm giữa 1000 và 2000 đồng thời chia hết cho 3,5,7
             </Accordion.Header>
             <Accordion.Body>
-              <Image src={bai5} />
+            <ReactEmbedGist gist="doduyhung1292/b520f6af0d9be770822d35f593bdfdc1" />
               <h3>Kết quả:</h3>
-              <h5>Đỗ Duy Hưng 20183754</h5><h5>  
-1050
-1155
-1260
-1365
-1470
-1575
-1680
-1785
-1890
-1995
-</h5>
+              <div>{bai4()}</div>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="6">
@@ -311,12 +305,9 @@ function CompoBaitaptuan1() {
               Bài 06: In ra màn hình 5 số hoàn hảo đầu tiên (Số hoàn hảo là số có tổng bằng các ước số của mình kể cả 1)
             </Accordion.Header>
             <Accordion.Body>
-              <Image src={bai6} />
+              <ReactEmbedGist gist="doduyhung1292/5c0eefe7e57dfda3b42d4bbe90cab0a3" />
               <h3>Kết quả:</h3>
-              <h5>Đỗ Duy Hưng 20183754</h5><h5>  
-6
-28
-496</h5>
+              <div>{bai6()}</div>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="7">
@@ -324,13 +315,9 @@ function CompoBaitaptuan1() {
               Bài 07: Trong các số tự nhiên nhỏ hơn hoặc bằng 100, hãy đếm xem có bao nhiêu số
             </Accordion.Header>
             <Accordion.Body>
-              <Image src={bai7} />
+             <ReactEmbedGist gist="doduyhung1292/2136d1e0d8376f94a1847569cc717648" />
               <h3>Kết quả:</h3>
-              <h5>Đỗ Duy Hưng 20183754 </h5>
-<h5>Số số chia 5 dư 0: 21</h5>
-<h5>Số số chia 5 dư 1: 20</h5>
-<h5>Số số chia 5 dư 2: 20</h5>
-<h5>Số số chia 5 dư 3: 20</h5>
+              <div>{bai7()}</div>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="8">
@@ -338,10 +325,9 @@ function CompoBaitaptuan1() {
               Bài 08: Cho số tự nhiên N bất kỳ (đã gán trước đó), tìm và in ra ước số nguyên tố nhỏ nhất của N.
             </Accordion.Header>
             <Accordion.Body>
-              <Image src={bai8} />
+              <ReactEmbedGist gist="doduyhung1292/5fc9f46f267261fe0c4e12e6a033f441" />
               <h3>Kết quả:</h3>
-              <h5>Đỗ Duy Hưng 20183754</h5><h5>  
-5</h5>
+              <div>{bai8()}</div>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="9">
@@ -349,10 +335,9 @@ function CompoBaitaptuan1() {
               Bài 09: Cho số tự nhiên N lớn hơn 1 bất kỳ (đã gán trước đó). In ra khai triển thành tích các số nguyên tố tính từ nhỏ đến lớn VD: 9🡪3.3; 12🡪2.2.3.
             </Accordion.Header>
             <Accordion.Body>
-              <Image src={bai9} />
+              <ReactEmbedGist gist="doduyhung1292/72655bd185c164ef11321344fa7fdee9" />
               <h3>Kết quả:</h3>
-              <h5>Đỗ Duy Hưng 20183754</h5><h5>  
-[ 2, 2, 5, 5 ]</h5>
+              <div>{bai9()}</div>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="10">
@@ -360,11 +345,9 @@ function CompoBaitaptuan1() {
               Bài 10: Cho trước số tự nhiên N bất kỳ (đã gán trước đó). In ra màn hình tất cả các ước số nguyên tố khác nhau của N.
             </Accordion.Header>
             <Accordion.Body>
-              <Image src={bai10} />
+              <ReactEmbedGist gist="doduyhung1292/e16321caf48cdf6d52954a3ff8db3920" />
               <h3>Kết quả:</h3>
-              <h5>Đỗ Duy Hưng 20183754</h5><h5>  
-2
-3</h5>
+              <div>{bai10()}</div>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="11">
@@ -372,11 +355,9 @@ function CompoBaitaptuan1() {
               Bài 11: Viết chương trình tráo đổi ngẫu nhiên vị trí một dãy số cho trước. Để lấy một số int ngẫu nhiên từ 0 đến n-1 ta dùng lệnh int i = Random. nextInt(n); 
             </Accordion.Header>
             <Accordion.Body>
-              <Image src={bai11} />
+              <ReactEmbedGist gist="doduyhung1292/ce296589f0e6fd6f542c3d85799968cf" />
               <h3>Kết quả:</h3>
-              <h5>Đỗ Duy Hưng 20183754</h5><h5>  
-[1, 4, 5, 4,
-  7, 6, 8, 6]</h5>
+              <div>{bai11()}</div>
 
             </Accordion.Body>
           </Accordion.Item>
@@ -385,14 +366,9 @@ function CompoBaitaptuan1() {
               Bài 12. Viết chương trình nhập chiều cao h từ bàn phím, sau đó hiển thị các tam giác hình sao có chiều cao h như dưới đây. Chú ý có kiểm tra điều kiện của h: h lớn hơn hoặc bằng 2, nhỏ hơn hoặc bằng 10. Nếu h nằm ngoài đoạn trên, yêu cầu người dùng nhập lại. (cho lựa chọn in tam giác xuôi hoặc ngược)
             </Accordion.Header>
             <Accordion.Body>
-              <Image src={bai12} />
+              <ReactEmbedGist gist="doduyhung1292/436db1408ed787bb5f4317f8d96d109c" />
               <h3>Kết quả:</h3>
-              <h5>Đỗ Duy Hưng 20183754 </h5>
-              <h5>*</h5>
-              <h5>**</h5>
-              <h5>***</h5>
-              <h5>****</h5>
-              <h5>*****</h5>
+              <div>{bai12()}</div>
             </Accordion.Body>
           </Accordion.Item>
           <h3>B/ Bài tập về hàm và thủ tục (Method & function)   </h3>
@@ -403,10 +379,9 @@ function CompoBaitaptuan1() {
 
             </Accordion.Header>
             <Accordion.Body>
-              <Image src={bai13} />
+              <ReactEmbedGist gist="doduyhung1292/16a9210263ecc066514f6d14a296dc6e" />
               <h3>Kết quả:</h3>
-              <h5>Đỗ Duy Hưng 20183754</h5><h5>  
-1.8181818181818181</h5>
+              <div>{bai1b()}</div>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="14">
@@ -414,10 +389,9 @@ function CompoBaitaptuan1() {
               Bài 14: Cho số tự nhiên N bất kỳ, tính tổng S= 1+ 1/2! + 1/3! + … + 1/N!
             </Accordion.Header>
             <Accordion.Body>
-              <Image src={bai14} />
+              <ReactEmbedGist gist="doduyhung1292/082af9e481b47a2a67aad27b18965dbc" />
               <h3>Kết quả:</h3>
-              <h5>Đỗ Duy Hưng 20183754</h5><h5>  
-1.7182818011463847</h5>
+              <div>{bai2b()}</div>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="15">
@@ -427,10 +401,9 @@ function CompoBaitaptuan1() {
 
             </Accordion.Header>
             <Accordion.Body>
-              <Image src={bai15} />
+              <ReactEmbedGist gist="doduyhung1292/3d20fdfabd80cc2e131924e66e0aac4b" />
               <h3>Kết quả:</h3>
-              <h5>Đỗ Duy Hưng 20183754</h5><h5>  
-1.482622338259841</h5>
+              <div>{bai3b()}</div>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="16">
@@ -438,10 +411,9 @@ function CompoBaitaptuan1() {
               Bài 16: Dãy Fibonaxi 1, 2, 3, … F(k) = F(k-1) + F(k-2). Tính số Fibonaxi thứ N.
             </Accordion.Header>
             <Accordion.Body>
-              <Image src={bai16} />
+              <ReactEmbedGist gist="doduyhung1292/8f7b39673fec624bcbf4b95a4add4f93" />
               <h3>Kết quả:</h3>
-              <h5>Đỗ Duy Hưng 20183754</h5><h5> 
-8</h5>
+              <div>{bai4b()}</div>
             </Accordion.Body>
           </Accordion.Item>
 
