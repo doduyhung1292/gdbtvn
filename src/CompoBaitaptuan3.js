@@ -203,7 +203,7 @@ function CompoBaitaptuan3() {
       arr1[i+1] = temp;
       arr.push(arr1.join(''));
     }
-    result.push(arr);
+    result.push(arr+ " ");
   return  result; }
 
   const bai15 = () => {
